@@ -4,3 +4,4 @@ sqlalchemy
 Pillow
 numpy
 python-multipart
+face_recognition
