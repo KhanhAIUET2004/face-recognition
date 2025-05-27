@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký User - Nhận dạng Khuôn mặt</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #capturedImagesContainer img {
+            max-width: 100px; /* Kích thước thumbnail */
+            max-height: 80px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        #registerAllButton {
+            background-color: #28a745; /* Màu xanh lá */
+            display: none; /* Ẩn ban đầu */
+        }
+        #registerAllButton:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">🏠 Về Trang chủ</a> <!-- Sửa lại nếu trang chủ là /index.html hoặc / -->
+        </nav>
+        <h1>Đăng ký Người dùng Mới</h1>
+
+        <label for="username">Tên người dùng:</label>
+        <input type="text" id="username" name="username" required>
+
+        <div class="video-container">
+            <video id="videoElement" autoplay playsinline></video>
+        </div>
+        
+        <p id="instructionText">Đang tải camera...</p>
+        <button id="captureButton">📸 Chụp ảnh</button>
+        <button id="registerAllButton">✅ Đăng ký với các ảnh đã chụp</button>
+        
+        <h2>Ảnh đã chụp:</h2>
+        <div id="capturedImagesContainer">
+            <!-- Thumbnails ảnh đã chụp sẽ hiển thị ở đây -->
+        </div>
+
+        <div id="messageArea"></div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>

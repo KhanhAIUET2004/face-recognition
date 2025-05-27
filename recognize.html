@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhận dạng Khuôn mặt</title>
+    <link rel="stylesheet" href="/css/style.css"> <!-- Đường dẫn đã được sửa -->
+    <style>
+        /* Các style này đã có trong style.css hoặc được thêm vào trong lần thảo luận trước */
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 640px; 
+            margin: 20px auto;
+            border: 1px solid #ccc;
+        }
+
+        video#videoElement { /* Cụ thể hơn cho video này nếu cần */
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        canvas#recognitionCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none; 
+        }
+        button#toggleRecognitionButton { /* Style cho nút mới */
+            display: block; /* Để nó chiếm cả hàng */
+            margin: 15px auto; /* Căn giữa và tạo khoảng cách */
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="/">🏠 Về Trang chủ</a>
+        </nav>
+        <h1>Nhận dạng Khuôn mặt</h1>
+
+        <div class="video-container">
+            <video id="videoElement" autoplay playsinline muted></video> <!-- Thêm muted -->
+            <canvas id="recognitionCanvas"></canvas>
+        </div>
+        
+        <!-- THÊM NÚT NÀY -->
+        <button id="toggleRecognitionButton">Bắt đầu Nhận dạng</button>
+        
+        <div id="messageArea">Đang khởi tạo camera...</div>
+        
+        <!-- Bỏ đi nếu không dùng, để tránh nhầm lẫn -->
+        <!-- <div id="recognitionInfo"> -->
+            <!-- Thông tin nhận dạng sẽ hiển thị ở đây (nếu cần text) -->
+        <!-- </div> -->
+    </div>
+
+    <script src="/js/config.js"></script> <!-- Đường dẫn đã được sửa -->
+    <script src="/js/recognize.js"></script> <!-- Đường dẫn đã được sửa -->
+</body>
+</html>
